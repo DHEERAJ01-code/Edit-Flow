@@ -1,0 +1,9 @@
+# Datasource is supplied by Testcontainers (@ServiceConnection).
+app:
+  cors:
+    allowed-origins: http://localhost:5173
+  jwt:
+    secret: test-only-signing-secret-at-least-32-bytes-long
+  # Off by default so suites that log in many times aren't throttled; RateLimitIT turns it on.
+  rate-limit:
+    enabled: false
